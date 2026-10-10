@@ -1,6 +1,6 @@
 name: Deploy to Cloudflare Pages
-# staging branch -> preview https://testclient-staging (staging.testclient.pages.dev)
-# main branch    -> production https://testclient.pages.dev (merge staging into main only)
+# staging branch -> preview https://https://staging.testclient-51t.pages.dev
+# main branch    -> production https://testclient-51t.pages.dev (merge staging into main only)
 on:
   push:
     branches: [staging, main]
