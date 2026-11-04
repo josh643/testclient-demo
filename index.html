@@ -170,6 +170,30 @@
     }
     .menu-list .price { color: #e3bc91; font-size: 1rem; font-weight: 600; }
 
+    .catering-section {
+      background: #eee6da;
+      padding: 12px clamp(1.25rem, 5vw, 4rem);
+    }
+    .catering-card {
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      box-shadow: 0 8px 24px rgba(48, 32, 24, .045);
+      display: grid;
+      gap: 1rem clamp(2rem, 5vw, 4rem);
+      grid-template-columns: minmax(0, .75fr) minmax(0, 1fr) auto;
+      margin: 0 auto;
+      max-width: 1120px;
+      padding: clamp(2rem, 5vw, 4rem);
+    }
+    .catering-card .eyebrow,
+    .catering-card .section-heading,
+    .catering-card p { margin-bottom: 0; }
+    .catering-copy p { color: var(--muted); line-height: 1.7; }
+    .catering-copy p + p { margin-top: .5rem; }
+    .catering-copy .special { color: var(--copper); font-weight: 700; }
+
     .details {
       display: grid;
       gap: 12px;
@@ -240,6 +264,8 @@
       .hero-art img { height: clamp(230px, 64vw, 360px); }
       .menu-list { grid-template-columns: 1fr; }
       .menu-list li { min-height: 64px; }
+      .catering-card { grid-template-columns: 1fr; }
+      .catering-card .call-link { justify-self: start; }
       .details { gap: 10px; grid-template-columns: 1fr; padding: 10px; }
       .store-photo img { min-height: 250px; }
     }
@@ -284,14 +310,21 @@
       </div>
     </section>
 
-    <section class="details" aria-label="Bakery information">
-      <div class="detail-card" id="catering">
-        <p class="eyebrow">For your gathering</p>
-        <h2 class="section-heading">Catering</h2>
-        <p>Office breakfast trays and party pastry boxes are available with 48 hours' notice. Call (555) 010-0000 to book.</p>
-        <p>This week's tray special: lemon poppyseed.</p>
+    <section class="catering-section" id="catering" aria-labelledby="catering-title">
+      <div class="catering-card">
+        <div>
+          <p class="eyebrow">For your gathering</p>
+          <h2 class="section-heading" id="catering-title">Catering</h2>
+        </div>
+        <div class="catering-copy">
+          <p>Office breakfast trays and party pastry boxes. Please order 48 hours ahead by calling (555) 010-0000.</p>
+          <p class="special">This week's tray special: cinnamon swirl.</p>
+        </div>
         <a class="call-link" href="tel:+15550100000">Call to book</a>
       </div>
+    </section>
+
+    <section class="details" aria-label="Bakery information">
       <div class="detail-card" id="hours">
         <p class="eyebrow">Stop by</p>
         <h2 class="section-heading">Hours</h2>
